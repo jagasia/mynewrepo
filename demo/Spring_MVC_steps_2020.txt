@@ -1,0 +1,27 @@
+1) File -> New -> Spring Starter Project
+2) Enter the project name
+	click Next
+3) Choose "Spring web" in Dependencies
+	click Finish
+4) in pom.xml
+	add the following dependencies
+		<dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		<!-- JSTL for JSP -->
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>jstl</artifactId>
+		</dependency>
+5) src/main/resources
+	application.properties (open this file)
+6) add following entries
+	spring.mvc.view.prefix=/WEB-INF/jsp/
+	spring.mvc.view.suffix=.jsp
+7) below the Maven Dependencies, src/main
+	create sub folders
+		webapp
+			WEB-INF
+				jsp
+8) inside jsp folder, create required jsp files
